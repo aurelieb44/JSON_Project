@@ -9,7 +9,6 @@ context of the for and if clauses which follow it.
 
 The list comprehension always returns a result list. '''
 
-
 '''
 new_list = []
 for i in original_list:
@@ -43,35 +42,22 @@ for i in original_list:
 #item should be transformed. '''
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Exercise ##
 
 # 1 Using a list comprehension, create a new list called "newlist" out of the list "numbers", 
 # which contains only the positive numbers from the list, as integers.
 
 numbers = [34.6, -203.4, 44.9, 68.3, -12.2, 44.6, 12.7]
+newlist = [i for i in numbers if i>0]
+print(newlist)
 
-
-
-
-## 2 create a list of integers which specify the length of each word in
-## a sentence except for the word 'the'
+## 2 create a list of integers which specify the length of each word in a sentence except for the word 'the'
 
 sentence = "the quick brown fox jumps over the lazy dog"
 words = sentence.split()
 
+integers = [len(i) for i in words if i != "the"]
+print(integers)
 
 
 ## Given dictionary is consisted of vehicles and their weights in kilograms. 
@@ -80,3 +66,6 @@ words = sentence.split()
 
 dict={"Sedan": 1500, "SUV": 2000, "Pickup": 2500, "Minivan": 1600, "Van": 2400, 
 "Semi": 13600, "Bicycle": 7, "Motorcycle": 110}
+
+new_list = [i.upper() for i in dict.keys() if dict[i]<5000]
+print(new_list)
