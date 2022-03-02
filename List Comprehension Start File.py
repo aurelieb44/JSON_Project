@@ -9,7 +9,6 @@ context of the for and if clauses which follow it.
 
 The list comprehension always returns a result list. '''
 
-
 '''
 new_list = []
 for i in old_list:
@@ -19,7 +18,6 @@ for i in old_list:
 #You can obtain the same thing using list comprehension:
 
 # new_list = [expression(i) for i in old_list if filter(i)]
-
 
 #The list comprehension starts with a '[' and ']', to help you remember that the
 #result is going to be a list.
@@ -31,7 +29,6 @@ for i in old_list:
     if conditional:
         expression '''
 		
-
 #Which corresponds to:
 #*result*  = [*transform*    *iteration*         *filter*     ]
 
@@ -39,7 +36,6 @@ for i in old_list:
 
 # classic way
 from curses.ascii import isdigit
-
 
 old_list = [1,2,3,4,5]
 new_list = []
@@ -73,7 +69,7 @@ print(multiplied) #[9,12,15]
 # 4) using list comprehension for string manipulation
 
 listOfWords = ["this", "is", "a", "list", "of", "words"]
-items = [x[0] for w in listOfWords]
+items = [x[0] for x in listOfWords]
 print(items) # Output - ['t', 'i', 'a', 'l', 'o', 'w']
 
 # 5) Let's show how easy you can convert lower case / upper case letters.

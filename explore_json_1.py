@@ -3,9 +3,9 @@ infile = open('eq_data_1_day_m1.json', 'r')
 outfile = open('readable_eq_data.json', 'w')
 
 eq_data = json.load(infile) # convert the json file into a python object
-json.dump(eq_data, outfile, indent=4)
+json.dump(eq_data, outfile, indent=4) # takes the eq_data dictionary and creates a formatted json file so that we can read it
 
-list_of_eqs = eq_data["features"]
+list_of_eqs = eq_data["features"] # list_of_eqs is a list of dictionaries
 
 mags, lons, lats = [],[],[]
 
