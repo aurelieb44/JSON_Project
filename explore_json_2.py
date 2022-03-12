@@ -3,9 +3,9 @@ infile = open('eq_data_30_day_m1.json', 'r')
 outfile = open('readable_eq_data.json', 'w')
 
 eq_data = json.load(infile) # convert the json file into a python object
-json.dump(eq_data, outfile, indent=4) # QUESTION
+json.dump(eq_data, outfile, indent=4)
 
-list_of_eqs = eq_data["features"] # QUESTION
+list_of_eqs = eq_data["features"]
 
 mags, lons, lats, hover_texts = [],[],[],[]
 
