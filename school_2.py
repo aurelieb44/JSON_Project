@@ -56,6 +56,6 @@ data = [
     },
     }]
 
-my_layout = Layout(title='% of African American Enrollment for Big XII Universities')
+my_layout = Layout(title='% of African American Enrollment For ACC, Big 12, Big Ten, Pac-12 and SEC Universities')
 fig = {'data':data, 'layout':my_layout}
 offline.plot(fig,filename='african_american_enrollment.html')

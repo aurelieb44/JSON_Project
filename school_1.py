@@ -60,6 +60,6 @@ data = [
     },
     }]
 
-my_layout = Layout(title='Women Graduation Rate For Big XII Universities')
+my_layout = Layout(title='Women Graduation Rate For ACC, Big 12, Big Ten, Pac-12 and SEC Universities')
 fig = {'data':data, 'layout':my_layout}
 offline.plot(fig,filename='graduation_rate_women.html')
