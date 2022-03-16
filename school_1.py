@@ -27,13 +27,12 @@ for univ in list_of_univ:
 
     if conf == 372 or conf == 108 or conf == 107 or conf == 127 or conf == 130 :
 
-        if int(univ['Graduation rate  women (DRVGR2020)'])>50:
-        #if int(0 if univ['Graduation rate  women (DRVGR2020)'] is None else univ['Graduation rate  women (DRVGR2020)'])>50:
+        if univ['Graduation rate  women (DRVGR2020)']>50:
             lon=int(univ["Longitude location of institution (HD2020)"])
             lat=int(univ["Latitude location of institution (HD2020)"])
             lons.append(lon)
             lats.append(lat)
-            grad_rate_w=int(univ['Graduation rate  women (DRVGR2020)'])            
+            grad_rate_w=univ['Graduation rate  women (DRVGR2020)']            
             institution=univ["instnm"]
             hover_text = institution + ', ' + str(grad_rate_w) +'%'
             hover_texts.append(hover_text)

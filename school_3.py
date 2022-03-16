@@ -20,18 +20,17 @@ hover_texts, enrolls, lons, lats = [], [], [], []
 
 for univ in list_of_univ:
     
-    conf = int(univ["NCAA"]["NAIA conference number football (IC2020)"]) 
+    conf = univ["NCAA"]["NAIA conference number football (IC2020)"]
 
     if conf == 372 or conf == 108 or conf == 107 or conf == 127 or conf == 130 :
 
-        #if int(univ["Total price for in-state students living off campus (not with family)  2020-21 (DRVIC2020)"])>50000:
         if univ["Total price for in-state students living off campus (not with family)  2020-21 (DRVIC2020)"]: 
             if univ["Total price for in-state students living off campus (not with family)  2020-21 (DRVIC2020)"]>50000:
             
                 try:
                     lon=int(univ["Longitude location of institution (HD2020)"])
                     lat=int(univ["Latitude location of institution (HD2020)"])
-                    price_is_oc=int(univ["Total price for in-state students living off campus (not with family)  2020-21 (DRVIC2020)"])            
+                    price_is_oc=univ["Total price for in-state students living off campus (not with family)  2020-21 (DRVIC2020)"]        
                     institution=univ["instnm"]
                     enroll=univ["Total  enrollment (DRVEF2020)"]
                 

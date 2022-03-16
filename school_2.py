@@ -20,11 +20,11 @@ hover_texts, enrolls, lons, lats = [], [], [], []
 
 for univ in list_of_univ:
 
-    conf = int(univ["NCAA"]["NAIA conference number football (IC2020)"]) 
+    conf = univ["NCAA"]["NAIA conference number football (IC2020)"]
 
     if conf == 372 or conf == 108 or conf == 107 or conf == 127 or conf == 130 :
 
-        if int(univ["Percent of total enrollment that are Black or African American (DRVEF2020)"])>10:
+        if univ["Percent of total enrollment that are Black or African American (DRVEF2020)"]>10:
             lon=int(univ["Longitude location of institution (HD2020)"])
             lat=int(univ["Latitude location of institution (HD2020)"])
             lons.append(lon)
